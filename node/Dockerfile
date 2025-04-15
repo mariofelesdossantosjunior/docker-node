@@ -1,4 +1,4 @@
-FROM node:21
+FROM node:20
 
 WORKDIR /usr/src/app
 
@@ -11,6 +11,7 @@ RUN wget https://github.com/jwilder/dockerize/releases/download/$DOCKERIZE_VERSI
 
 # Copia package.json e instala as dependências
 COPY package*.json ./
+
 RUN npm install
 
 # Copia o restante do código
